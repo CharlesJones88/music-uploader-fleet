@@ -7,9 +7,13 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - name: http
+      port: {{ .Values.http.port }}
+      targetPort: 32000
       protocol: TCP
-      name: http
+    - name: websocket
+      port: {{ .Values.websocket.port }}
+      targetPort: 32222
+      protocol: TCP
   selector:
     {{- include "music-uploader.selectorLabels" . | nindent 4 }}

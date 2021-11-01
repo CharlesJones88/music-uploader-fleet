@@ -40,7 +40,7 @@ securityContext: {}
 service:
   type: NodePort
   ports:
-  - name: http-server
+  - name: http
     port: 8200
     nodePort: 32200
   - name: websocket
