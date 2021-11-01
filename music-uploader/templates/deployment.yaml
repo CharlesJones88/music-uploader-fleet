@@ -36,10 +36,8 @@ spec:
           ports:
             - name: http
               containerPort: 8200
-              protocol: TCP
             - name: websocket
               containerPort: 8222
-              procotol: TCP
           livenessProbe:
             httpGet:
               path: /
