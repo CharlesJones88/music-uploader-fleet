@@ -8,11 +8,11 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - name: http
-      port: {{ .Values.http.port }}
+      port: 8200
       targetPort: 32000
       protocol: TCP
     - name: websocket
-      port: {{ .Values.websocket.port }}
+      port: 8222
       targetPort: 32222
       protocol: TCP
   selector:
