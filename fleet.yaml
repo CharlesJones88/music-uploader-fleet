@@ -3,7 +3,7 @@ helm:
   releaseName: musicuploader
   chart: 'github.com/CharlesJones88/music-uploader-fleet'
   repo: ''
-  version: 'master'
+  version: 'main'
   force: false
   timeoutSeconds: 0
   values:
