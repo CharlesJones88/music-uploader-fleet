@@ -40,11 +40,11 @@ spec:
               containerPort: 8222
           livenessProbe:
             httpGet:
-              path: /
+              path: /status
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /status
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
