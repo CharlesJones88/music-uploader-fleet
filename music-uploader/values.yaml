@@ -8,12 +8,12 @@ imagePullSecrets:
 nameOverride: ''
 fullnameOverride: ''
 volumes:
-  - name: musicuploaderstorage
+  - name: music-uploader-storage
     persistentVolumeClaim:
-      claimName: musicuploaderclaim
+      claimName: storage
 volumeMounts:
   - mountPath: /mnt/md0/public
-    name: musicuploaderstorage
+    name: music-uploader-storage
 serviceAccount:
   create: true
   annotations: {}
