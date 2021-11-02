@@ -9,11 +9,11 @@ spec:
   ports:
     - name: http
       port: 8200
-      targetPort: 32000
+      targetPort: 8200
       protocol: TCP
     - name: websocket
       port: 8222
-      targetPort: 32222
+      targetPort: 8222
       protocol: TCP
   selector:
     {{- include "music-uploader.selectorLabels" . | nindent 4 }}
