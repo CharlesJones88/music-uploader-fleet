@@ -7,6 +7,13 @@ imagePullSecrets:
 - name: docker
 nameOverride: ''
 fullnameOverride: ''
+volumes:
+  - name: musicuploaderstorage
+    persistentVolumeClaim:
+      claimName: musicuploaderclaim
+volumeMounts:
+  - mountPath: /mnt/md0/public
+    name: musicuploaderstorage
 serviceAccount:
   create: true
   annotations: {}
