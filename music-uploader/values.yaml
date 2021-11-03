@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: ultramixerman/musicuploader
   pullPolicy: IfNotPresent
-  tag: '55'
+  tag: '56'
 imagePullSecrets:
 - name: docker
 nameOverride: ''
