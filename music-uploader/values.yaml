@@ -2,18 +2,18 @@ replicaCount: 1
 image:
   repository: ultramixerman/musicuploader
   pullPolicy: IfNotPresent
-  tag: '39'
+  tag: '40'
 imagePullSecrets:
 - name: docker
 nameOverride: ''
 fullnameOverride: ''
 volumes:
-  - name: music-uploader-storage
-    persistentVolumeClaim:
-      claimName: storage
+- name: music-uploader-storage
+  persistentVolumeClaim:
+    claimName: storage
 volumeMounts:
-  - mountPath: /mnt/md0/public
-    name: music-uploader-storage
+- mountPath: /mnt/md0/public
+  name: music-uploader-storage
 serviceAccount:
   create: true
   annotations: {}
