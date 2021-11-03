@@ -60,3 +60,7 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+      - name: {{- with .Values.volumes.name }}
+      persistentVolumeClaim:
+        claimName: {{- with .Values.volumes.persistentVolumeClaim.claimName }}
