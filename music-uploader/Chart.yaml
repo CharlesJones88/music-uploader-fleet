@@ -2,5 +2,5 @@ apiVersion: v2
 name: music-uploader
 description: A Helm chart for Kubernetes
 type: application
-version: '64'
-appVersion: '64'
+version: '65'
+appVersion: '65'
