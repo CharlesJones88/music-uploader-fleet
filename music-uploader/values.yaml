@@ -10,7 +10,7 @@ fullnameOverride: ''
 volumes:
 - name: music-uploader-volume
   persistentVolumeClaim:
-    claimName: storage
+    claimName: music-uploader-storage-claim
 volumeMounts:
 - mountPath: /mnt/md0/public
   name: music-uploader-volume
